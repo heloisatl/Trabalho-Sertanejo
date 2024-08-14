@@ -22,18 +22,42 @@
 
     <div class="content">
         <h1>MARCELA AZEVEDO</h1>
-        <p>DESCRIÇÂO CURTA DA MARCELA AZEVEDO
-        </p>    
+        <p>DESCRIÇÂO CURTA DA MARCELA AZEVEDO</p>    
         <div>
             <button type="button" onclick="location.href='Agenda.html';"><span class="spanContainer"></span>VER AGENDA</button>
             <button type="button" onclick="location.href='Biografia.html';"><span class="spanContainer"></span>SAIBA MAIS</button>
         </div>
-    
+    </div>
+    <div id="social-midia">
+        <a href="https://instagram.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com/MarcelaAzevedo" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <p class="social-nome">Marcela Azevedo</p>
     </div>
 
-    <!-- <div class="container"> -->
-        <!-- <img src="imagens/Isabela Martins Capa.png" alt="Isabela Martins" > -->
-    <!-- </div> -->
-
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            const background = document.querySelector('.bg');
+            
+            const intensity = 20; // Ajuste este valor para aumentar ou diminuir o efeito
+            
+            const offsetX = (x / window.innerWidth) * intensity - (intensity / 2); 
+            const offsetY = (y / window.innerHeight) * intensity - (intensity / 2);
+            
+            background.style.backgroundPosition = `${offsetX}px ${offsetY}px`;
+        });
+    </script>
 </body>
 </html>
