@@ -21,40 +21,48 @@
     src: url('./fontes/Bonuses and services.pdf');
 }
 
+
+@font-face {
+    font-family: 'nova';
+    src: url(./fontes/against\ regular.otf);
+}
 body {
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+    padding-top: 60px; /* Ajuste este valor conforme a altura da sua navbar */
+    /* Outros estilos */
 }
 
 nav {
     padding: 5px;
-    margin-left: 1%;
-    margin: 2%;
+
     padding: 0.3%;
-    font-size: 15px;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
-    z-index: 1;
-    position: relative;
+    font-size: 20px;
+    display: flex; 
+    z-index: 1000; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0px 50px 10px 0px;
-    position: relative;
+    padding: 10px 20px; 
+    position: relative; 
+    display: inline-block; 
+    line-height: 40px; 
+
 }
 
 nav a::after {
     content: " ";
     width: 0%;
-    height: 2px;
+    height: 2px; /*expessura do sublinhado*/
     background-color: white;
     position: absolute;
-    bottom: 0;
+    bottom: -5px; 
     left: 0;
-    transition: 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after {
@@ -74,7 +82,8 @@ nav a:hover::after {
     font-size: 70px;
     margin-top: 80px;
     color: white;
-    font-family: 'bonuses';
+    font-family: 'nova';
+    
 }
 
 .content p {
@@ -135,20 +144,15 @@ button:hover .spanContainer {
 }
 
 .background-section {
-    position: fixed; /* fixa o vídeo na tela inteira */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    overflow: hidden;
+    z-index: -1; /* Gradiente atrás de tudo */
+
 }
 
-.background-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .background-section::before {
     content: '';
@@ -157,19 +161,88 @@ button:hover .spanContainer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) 50%; /* Gradiente escuro da direita para a esquerda até a metade */
-    z-index: 1;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
+    z-index: 1; 
 }
 
 .container-fluid {
-    width: 50%;
-    background-color: #8a4c2891;
+    max-width: 50%;
     margin: 0px 50px 20px 0px;
     padding: 0px 0px 0px 10px;
     box-sizing: border-box;
-   
-    color: #633419;
+    overflow-y: auto; /* Muda para auto para exibir a barra de rolagem quando necessário */
+    height: 900px; /* Verifique se esta altura faz sentido para o conteúdo */
 }
+
+.container-fluid::-webkit-scrollbar {
+    width: 10px; /* Tamanho da barra de rolagem */
+}
+
+.container-fluid::-webkit-scrollbar-thumb {
+    background-color: #5d688a; /* Cor da barra de rolagem */
+}
+
+.social-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.social-bar a {
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-bar a img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-bar a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+/*SOCIAL MEDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*//*
+#social-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza ícones e nome *//*
+    justify-content: flex-start;
+    position: fixed;
+    right: 20px;
+    top: calc(100% - 420px); /* Começa na mesma altura que a seção "Informações de Contato" *//*
+  }
+  
+  #social-midia .social-icon {
+    margin-bottom: 20px; /* Aumenta a margem inferior do ícone *//*
+  }
+  
+  #social-midia .social-icon i {
+    font-size: 32px; /* Aumenta o tamanho do ícone *//*
+    color: #E8F2D0; /* Cor dos ícones sociais *//*
+  }
+  
+  #social-midia .social-nome {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+    color: #E8F2D0; /* Cor do nome *//*
+    transform: rotate(-90deg); /* Nome deitado *//*
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+  
+  #social-midia .social-icon:first-of-type {
+    margin-top: o; /* Remove margem superior do primeiro ícone *//*
+  }
+  
+/*ACABOUUUUUUUUUUUUUUUUUU SOCIALLLLLLLL MEDIAAAAAAAAAAAAAAAA*/  
 
 .data {
     font-size: 20px;
@@ -182,9 +255,22 @@ button:hover .spanContainer {
 .agenda h1 {
     color: white;
     font-size: 50px;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
     border: 0 0 10px 0;
 }
+
+
+.agendaImage {
+    display: flex; 
+    justify-content: flex-start; 
+    
+    border: 0 30px; 
+    margin: 50px 100px;
+    width: 70vh;
+    align-items: center; 
+    box-shadow: white 10px 10px;
+}
+
 
 .text {
     font-size: 25px;
@@ -206,26 +292,27 @@ button:hover .spanContainer {
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.s ease-in-out;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    border: solid white 2px;
+    margin: 0 10px;
 }
 
 .ingresso:hover {
-    background-color: #506635;
+    background-color: #5a6dd8;
 }
 
 .agendona {
-    background-color: #D9763D;
+    background-color: #304173;
+    z-index: 0; /* Menor valor para ficar atrás do gradiente */
 }
 
 .lugar {
-    padding: 10px;
+    padding: 5px 0 15px 0;
     color: white;
 }
 
-.vd {
-    width: 100%;
-}
+
