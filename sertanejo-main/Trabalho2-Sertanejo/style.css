@@ -316,3 +316,87 @@ button:hover .spanContainer {
 }
 
 
+/******************Biografia***************/
+.pagbiografia{
+    background-color: #273940 ;
+}
+
+.biografia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 60px; 
+}
+.secaobio h1 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+}
+.secaobio h2 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+    padding: 0 0 0 30px;
+}
+.secaobio h3 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 50px;
+    padding: 0 0 0 30px;
+}
+
+.secaobio p {
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 40px;
+    padding: 0 0 0 20px;
+}
+.secaobio #Iniciocarreira {
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 50px;
+    padding: 0 0 0 30px;
+}
+.secaobio #Ascencaosucesso{
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 60px;
+    padding: 0 0 0 40px;
+}
+
+.secaobio {
+    background-color: #38545f;
+    max-width: 50%;
+    flex: 30%; 
+    border-radius: 5%;
+    
+}
+
+.imagebio {
+    justify-content: left;
+    flex: 1 1 30%;
+    max-width: 30%;
+    height: auto;
+    margin: 10px 100px;
+    border-radius: 25% 25% 10% 10%;
+    box-shadow: 20px 25px#122127;
+}
+
+.secao-bio-adicional {
+    max-width: 50%;
+    ;
+    border-radius: 5%;
+    background-color: #38545f;
+    color: #e7c09c;
+    font-size: 25px;
+    padding: 20px;
+    margin: 20px 0; 
+}
+
+.secao-bio-adicional h2 {
+    color: #f7e0cb;
+    font-size: 40px; /* Ajuste o tamanho do título conforme necessário */
+    margin: 10px 0;
+}
