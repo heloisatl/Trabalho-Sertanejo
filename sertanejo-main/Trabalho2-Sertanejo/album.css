@@ -14,29 +14,36 @@ body, html {
 /* Estilo para o nav */
 nav {
     padding: 5px;
-    margin-left: 1%;
-    margin: 2%;
+
     padding: 0.3%;
-    font-size: 15px;
-    display: flex;
+    font-size: 20px;
+    display: flex; 
+    z-index: 1000; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0px 50px 10px 0px;
-    position: relative;
+    padding: 10px 20px; 
+    position: relative; 
+    display: inline-block; 
+    line-height: 40px; 
+
 }
 
 nav a::after {
     content: " ";
     width: 0%;
-    height: 2px;
+    height: 2px; /*expessura do sublinhado*/
     background-color: white;
     position: absolute;
-    bottom: 0;
+    bottom: -5px; 
     left: 0;
-    transition: 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after {
