@@ -384,19 +384,29 @@ button:hover .spanContainer {
     box-shadow: 20px 25px#122127;
 }
 
-.secao-bio-adicional {
-    max-width: 50%;
-    ;
-    border-radius: 5%;
+#bio-adicional {
+    margin: 60px 0 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; 
+    width: 40%; 
     background-color: #38545f;
-    color: #e7c09c;
-    font-size: 25px;
     padding: 20px;
-    margin: 20px 0; 
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+#bio-adicional h2 {
+    color: #f7e0cb;
+    font-size: 50px;
+    margin: 20px 10px 10px 40px;
+    padding: 0 0 0 30px;
 }
 
-.secao-bio-adicional h2 {
-    color: #f7e0cb;
-    font-size: 40px; /* Ajuste o tamanho do título conforme necessário */
-    margin: 10px 0;
+#bio-adicional p{
+    color: #e7c09c;
+    font-size: 25px; 
+    margin: 20px 0px 10px 40px;
+    padding: 0 0 0 20px;
 }
