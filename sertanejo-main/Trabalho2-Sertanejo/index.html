@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sertanejo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     
 </head>
 <body class="bg">
@@ -27,22 +28,5 @@
             <button type="button" onclick="location.href='Biografia.html';"><span class="spanContainer"></span>SAIBA MAIS</button>
         </div>
     </div>
-
-
-    <script>
-        document.addEventListener('mousemove', function(e) {
-            const x = e.clientX;
-            const y = e.clientY;
-            
-            const background = document.querySelector('.bg');
-            
-            const intensity = 20; // Ajuste este valor para aumentar ou diminuir o efeito
-            
-            const offsetX = (x / window.innerWidth) * intensity - (intensity / 2); 
-            const offsetY = (y / window.innerHeight) * intensity - (intensity / 2);
-            
-            background.style.backgroundPosition = `${offsetX}px ${offsetY}px`;
-        });
-    </script>
 </body>
 </html>
