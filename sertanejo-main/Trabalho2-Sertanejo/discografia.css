@@ -44,7 +44,7 @@ nav a:hover::after {
 body, html {
     min-height: 100%;
     margin: 0;
-    background-color: black;
+    background-color: #193441;
 }
 /* Flip Card CSS */
 .flip-card {
