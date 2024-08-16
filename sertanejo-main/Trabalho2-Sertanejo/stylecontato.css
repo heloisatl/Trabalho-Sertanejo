@@ -6,53 +6,54 @@
 }
 
 body {
-  background-color: #591218; /* Cor de fundo da página inteira */
+  background-color: #273940; /* Cor de fundo da página inteira */
   font-family: 'Arvo', serif; /* Fonte Arvo */
-  color: #E8F2D0;
+  color: #f7e0cb;
   margin: 0;
   padding: 0;
 }
 
 nav {
-  padding: 5px;
-  margin-left: 1%;
-  margin: 2%;
   padding: 0.3%;
-  font-size: 15px;
-  display: flex;
-  background-color: #591218; /* Cor de fundo da nav */
+  font-size: 20px;
+  display: flex; 
+  z-index: 1000; 
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
 }
 
 nav a {
-  color: #E8F2D0; /* Cor dos links da navegação */
+  color: #f7e0cb;
   text-decoration: none;
-  padding: 0px 50px 10px 0px;
-  position: relative;
+  padding: 10px 20px; 
+  position: relative; 
+  display: inline-block; 
+  line-height: 40px; 
 }
 
-/* "::after" é um pseudoelemento, voce adiciona outro elemento depois do elemento "nav a", que no caso vai ser a "borda de baixo"
-content=" " para dizer que o conteúdo dessa nav é vazia*/
 nav a::after {
   content: " ";
   width: 0%;
-  height: 2px;
-  background-color: #E8F2D0;
+  height: 2px; /* Espessura do sublinhado */
+  background-color: #f7e0cb;
   position: absolute;
-  bottom: 0;
+  bottom: -5px; 
   left: 0;
-  transition: 0.3s ease-in-out; /*ease-in-out serve para que ele comece suave e termine suave*/
+  transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after {
   width: 100%;
 }
-/***   Fim da Parte da Helooo  ***/
+/*** Fim da Parte da Helooo  ***/
 
 
 /***  COMEÇO DA PARTE DE CONTATO ***/
 header {
-  background-color: #591218; /* Cor de fundo do header */
-  padding: 10px 0;
+  background-color: #273940; /* Cor de fundo do header */
+  padding : 10px 0;
   text-align: center;
 }
 
@@ -63,28 +64,23 @@ header {
   gap: 20px; /* Espaço entre as seções */
   height: 100vh; /* Altura da viewport */
   overflow: hidden; /* Esconde rolagem global */
-  background-color: #591218;
+  background-color: #273940;
+  margin-top: 80px; /* Espaço entre a nav e o conteúdo */
 }
-
 
 /** Começo da Parte da Imagem **/
 #secao-img {
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  margin-right: 360px;
-  background-color: #591218;
-}
-
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+  }
+  
 #secao-img img {
-  background-color: #485673;
-  padding: 10px;
-  max-width: 400px;
-  height: 80%;
-  overflow-y: auto;
-  color: #E8F2D0;
-  border-radius: 18px;
+  width: 100%;
+    height: auto;
+    border: 10px solid #E8F2D0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 /** Fim da Parte da Imagem **/
 
@@ -92,16 +88,16 @@ header {
 /** Começo da Parte de Contato **/
 #contato-inf {
   flex: 1;
-  background-color: #591218; /* Cor de fundo da seção de contato */
+  background-color: #273940; /* Cor de fundo da seção de contato */
   padding: 20px;
   border-radius: 10px;
   scrollbar-width: thin;
-  scrollbar-color: #D9763D #591218;
+  scrollbar-color: #e7c09c #273940;
   margin-left: 40px;
 }
 
 #contato-inf h2, #contact-form h2 {
-  color: #E8F2D0;
+  color: #f7e0cb;
 }
 
 .contato-item {
@@ -110,7 +106,7 @@ header {
 
 .contato-item h3 {
   margin-bottom: 5px;
-  color: #D9763D;
+  color: #e7c09c;
 }
 
 .contato-item p {
@@ -119,15 +115,15 @@ header {
 
 #contato-inf a {
   text-decoration: none;
-  color: #E8F2D0; /* Cor dos links na seção de contato */
+  color: #f7e0cb; /* Cor dos links na seção de contato */
 }
 
 #contato-inf a:hover {
-  color: #D9763D; /* Muda a cor para um tom da paleta quando o mouse passa por cima */
+  color: #e7c09c; /* Muda a cor para um tom da paleta quando o mouse passa por cima */
 }
 
 #messagem-link a {
-  color: #E8F2D0;
+  color: #f7e0cb;
   text-decoration: none;
   font-weight: bold;
 }
@@ -155,7 +151,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #591218;
+  background-color: #273940;
   padding: 30px;
   border-radius: 10px;
   width: 90%;
@@ -174,13 +170,13 @@ header {
 
 .contact-form .form-header h2 {
   margin: 0;
-  color: #E8F2D0;
+  color: #f7e0cb;
 }
 
 .contact-form .form-header button {
   background-color: transparent;
   border: none;
-  color: #E8F2D0;
+  color: #f7e0cb;
   font-size: 24px;
   cursor: pointer;
 }
@@ -197,15 +193,15 @@ header {
 .contact-form input, 
 .contact-form textarea {
   padding: 10px;
-  border: 1px solid #D9763D;
+  border: 1px solid #e7c09c;
   border-radius: 5px;
-  background-color: #E8F2D0;
-  color: #591218;
+  background-color: #f7e0cb;
+  color: #273940;
 }
 
 .contact-form button {
-  background-color: #D9763D;
-  color: white;
+  background-color: #e7c09c;
+  color: #273940;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -213,7 +209,7 @@ header {
 }
 
 .contact-form button:hover {
-  background-color: #BF4F26;
+  background-color: #38545f;
 }
 
 body.blur {
@@ -239,13 +235,13 @@ body.blur {
 
 #social-midia .social-icon i {
   font-size: 32px; /* Aumenta o tamanho do ícone */
-  color: #E8F2D0; /* Cor dos ícones sociais */
+  color: #f7e0cb; /* Cor dos ícones sociais */
 }
 
 #social-midia .social-nome {
   font-family: 'Arvo', serif;
   font-style: italic;
-  color: #E8F2D0; /* Cor do nome */
+  color: #f7e0cb; /* Cor do nome */
   transform: rotate(-90deg); /* Nome deitado */
   white-space: nowrap;
   margin-top: 50px;
@@ -258,13 +254,14 @@ body.blur {
 
 /*** COMEÇO DA PARTE DE OUÇA ***/
 #ouca {
-  background-color: #591218;
+  background-color: #273940;
   padding: 60px 20px;
-  color: #E8F2D0;
+  color: #f7e0cb;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 80px; 
 }
 
 #ouca .content {
@@ -290,7 +287,7 @@ body.blur {
 .line {
   width: 100%;
   height: 4px;
-  background-color: #627348;
+  background-color: #38545f;
   margin-bottom: 30px;
 }
 
@@ -301,8 +298,8 @@ body.blur {
 }
 
 .tracks .btn {
-  background-color: #627348;
-  color: #E8F2D0;
+  background-color: #38545f;
+  color: #f7e0cb;
   padding: 15px 30px;
   margin-bottom: 20px;
   text-align: left;
@@ -315,7 +312,7 @@ body.blur {
 }
 
 .tracks .btn:hover {
-  background-color: #BF4F26;
+  background-color: #122127;
 }
 
 /* Estilos da Imagem */
